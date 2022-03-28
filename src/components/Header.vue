@@ -78,11 +78,11 @@ export default {
   @import "../assets/scss/style.scss";
 
   .header{
+    @include withWebsite;
     @include centerContentInDiv;
     display: flex;
     justify-content: space-between;
     padding: 1rem 0;
-    height: 10vh;
 
     .nav-container {
       @include centerContentInDiv;

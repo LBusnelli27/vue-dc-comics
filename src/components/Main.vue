@@ -1,13 +1,18 @@
 <template>
   <div class="main">
     <div class="comics-container">
-      <h2>---x  Content goes here  x---</h2>
+      <div class="comics-in-container">
+        <h2>---x  Content goes here  x---</h2>
+      </div>
     </div>
     <div class="comics-buy-container">
-      <div class="element-comics-buy" v-for="(element, index) in mainNavBuyElement" :key="index">
-        <img :src="'./img/' + element.imgName" :alt="element.text + ' img'">
-        <h4>{{ element.text }}</h4>
+      <div class="div-container-element">
+        <div class="element-comics-buy" v-for="(element, index) in mainNavBuyElement" :key="index">
+          <img :src="'./img/' + element.imgName" :alt="element.text + ' img'">
+          <p>{{ element.text }}</p>
+        </div>
       </div>
+      
     </div>
   </div>
 </template>
@@ -54,22 +59,37 @@ export default {
 
   .comics-container {
     background-color: $bgBlack;
-    h2{
-      color: white;
-      text-align: center;
-      padding: 2rem;
+    .comics-in-container {
+      @include withWebsite;
+      h2{
+        color: white;
+        text-align: center;
+        padding: 2rem;
+      }
     }
   }
 
   .comics-buy-container {
     background-color: $mainColor;
-    display: flex;
-    .element-comics-buy {
+    .div-container-element {
+      @include withWebsite;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
       padding: 1rem;
-      img {
-        width: 50%;
-        height: 50%;
+      .element-comics-buy {
+        display: flex;
+        align-items: center;
+        padding: 1rem;
+        p {
+          padding-left: .5rem;
+          font-size: .9rem;
+        }
+        img {
+          width: 50px;
+          height: 50px;
+        }
       }
-    }
+    } 
   }
 </style>

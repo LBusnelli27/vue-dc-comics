@@ -20,8 +20,4 @@ export default {
 
 <style lang="scss">
   @import "./assets/scss/style.scss";
-
-  #app {
-    padding: 0 5rem;
-  }
 </style>
