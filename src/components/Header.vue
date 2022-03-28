@@ -1,6 +1,10 @@
 <template>
-  <div>
-    <img src="../img/dc-logo.png" alt="">
+  <div class="header">
+    <img src="../assets/img/dc-logo.png" alt="Logo DC Comics Header">
+
+    <ul>
+      <li></li>
+    </ul>
   </div>
 </template>
 

@@ -1,0 +1,8 @@
+$mainColor : #0282f9;
+$bgDarkGray : #303030;
+
+@mixin centerContentInDiv {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

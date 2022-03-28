@@ -16,5 +16,10 @@ export default {
 </script>
 
 <style lang="scss">
+  @import "./assets/scss/style.scss";
 
+  #app {
+    max-width: 80%;
+    margin: 0 auto;
+  }
 </style>
