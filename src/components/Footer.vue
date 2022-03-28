@@ -1,7 +1,7 @@
 <template>
   <div class="footer">
     <section class="top-part-footer">
-      <img src="../assets/img/footer-bg.jpg" alt="Background footer img">
+      <img class="bg-image-dc" src="../assets/img/footer-bg.jpg" alt="Background footer img">
 
       <div class="footer-container-list">
         <div class="list-side-footer">
@@ -195,6 +195,9 @@ export default {
 
   .top-part-footer {
     position: relative;
+    .bg-image-dc {
+      width: 100%;
+    }
     .footer-container-list {
       @include withWebsite;
       color: white;
