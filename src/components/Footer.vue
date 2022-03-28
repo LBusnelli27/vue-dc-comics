@@ -209,7 +209,7 @@ export default {
       align-items: center;
       .list-side-footer {
         display: flex;
-        gap: 3.5rem;
+        gap: 4rem;
         h2 {
           margin-top: 1rem;
           margin-bottom: .7rem;
