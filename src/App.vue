@@ -7,7 +7,7 @@
 
 <script>
 import Header from './components/Header.vue';
-import Main from './components/Main.vue'
+import Main from './components/Main.vue';
 
 export default {
   name: 'App',
@@ -22,7 +22,6 @@ export default {
   @import "./assets/scss/style.scss";
 
   #app {
-    max-width: 80%;
-    margin: 0 auto;
+    padding: 0 5rem;
   }
 </style>

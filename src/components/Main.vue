@@ -4,8 +4,9 @@
       <h2>---x  Content goes here  x---</h2>
     </div>
     <div class="comics-buy-container">
-      <div v-for="(element, index) in mainNavBuyElement" :key="index">
-        <img :src="'../assets/img/' + element.imgName" :alt="element.text + ' img'">
+      <div class="element-comics-buy" v-for="(element, index) in mainNavBuyElement" :key="index">
+        <img :src="'./img/' + element.imgName" :alt="element.text + ' img'">
+        <h4>{{ element.text }}</h4>
       </div>
     </div>
   </div>
@@ -25,12 +26,12 @@ export default {
         {
           text: "Dc Merchndise",
           href: "#",
-          imgName: "buy-comics-merhandise.png"
+          imgName: "buy-comics-merchandise.png"
         },
         {
           text: "Subscription",
           href: "#",
-          imgName: "buy-comics-subscription.png"
+          imgName: "buy-comics-subscriptions.png"
         },
         {
           text: "Comic Shop Locator",
@@ -63,5 +64,12 @@ export default {
   .comics-buy-container {
     background-color: $mainColor;
     display: flex;
+    .element-comics-buy {
+      padding: 1rem;
+      img {
+        width: 50%;
+        height: 50%;
+      }
+    }
   }
 </style>
