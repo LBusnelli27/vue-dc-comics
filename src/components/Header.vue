@@ -84,6 +84,11 @@ export default {
     justify-content: space-between;
     padding: 1rem 0;
 
+    img {
+      height: 80px;
+      width: 80px;
+    }
+
     .nav-container {
       @include centerContentInDiv;
       height: 100%;
@@ -93,6 +98,7 @@ export default {
           padding: 0 .6rem;
           text-transform: uppercase;
           font-size: .8rem;
+          font-weight: 600;
           &:hover {
             border-bottom: 3px solid $mainColor;
           }

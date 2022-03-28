@@ -83,11 +83,14 @@ export default {
         padding: 1rem;
         p {
           padding-left: .5rem;
-          font-size: .9rem;
+          font-size: .7rem;
+          font-weight: 700;
+          color: white;
+          text-transform: uppercase;
         }
         img {
           width: 50px;
-          height: 50px;
+          height: 60px;
         }
       }
     } 
