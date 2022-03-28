@@ -2,12 +2,42 @@
   <div class="footer">
     <section class="top-part-footer">
       <img src="../assets/img/footer-bg.jpg" alt="Background footer img">
+
       <div class="footer-container-list">
-        <div>
-          <div></div>
-          <div></div>
-          <div></div>
+        <div class="list-side-footer">
+          <div>
+            <h2>Dc Comics</h2>
+            <ul>
+              <li v-for="(element, index) in footerDcComics" :key="index">
+                <a :href="element.href">{{ element.text }}</a>
+              </li>
+            </ul>
+
+            <h2>Shop</h2>
+            <ul>
+              <li v-for="(element, index) in footerShop" :key="index">
+                <a :href="element.href">{{ element.text }}</a>
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h2>Dc</h2>
+            <ul>
+              <li v-for="(element, index) in footerDc" :key="index">
+                <a :href="element.href">{{ element.text }}</a>
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h2>Sites</h2>
+            <ul>
+              <li v-for="(element, index) in footerSites" :key="index">
+                <a :href="element.href">{{ element.text }}</a>
+              </li>
+            </ul>
+          </div>
         </div>
+
         <img src="../assets/img/dc-logo-bg.png" alt="Background footer logo">
       </div>
     </section>
@@ -166,11 +196,32 @@ export default {
   .top-part-footer {
     position: relative;
     .footer-container-list {
+      @include withWebsite;
+      color: white;
+      position: absolute;
+      top: 50px;
+      left: 100px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      .list-side-footer {
+        display: flex;
+        gap: 3.5rem;
+        h2 {
+          margin-top: 1rem;
+          margin-bottom: .7rem;
+          text-transform: uppercase;
+        }
+        li {
+          margin-bottom: .4rem;
+          a {
+          color: #c8cdce;
+          font-weight: 200;
+        }
+        }
+      }
       img {
-        position: absolute;
-        top: -40px;
-        right: 70px;
-        height: 500px;
+        height: 350px;
       }
     }
   }
