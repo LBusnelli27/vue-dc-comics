@@ -43,7 +43,15 @@
     </section>
 
     <section class="bottom-part-footer">
-
+      <div class="container-bottom-footer">
+        <div class="sing-up-footer">
+          <button>Sing up now</button>
+        </div>
+        <div class="socials-footer">
+          <h2>Follow us</h2>
+          <img v-for="(element,index) in footerSocials" :key="index" :src="'./img/' + element.url" :alt="element.imgName">
+        </div>
+      </div>
     </section>
   </div>
 </template>
@@ -73,17 +81,14 @@ export default {
         {
           text: "Games",
           href: "#",
-          
         },
         {
           text: "Videos",
           href: "#",
-          
         },
         {
           text: "News",
           href: "#",
-          
         },
       ],
 
@@ -91,12 +96,10 @@ export default {
         {
           text: "Shop DC",
           href: "#",
-          
         },
         {
           text: "Shop DC Collectibles",
           href: "#",
-          
         },
       ],
 
@@ -104,57 +107,46 @@ export default {
         {
           text: "Terms Of Use",
           href: "#",
-          
         },
         {
           text: "Privacy policy (new)",
           href: "#",
-          
         },
         {
           text: "Ad Choise",
           href: "#",
-          
         },
         {
           text: "Advertising",
           href: "#",
-          
         },
         {
           text: "Jobs",
           href: "#",
-          
         },
         {
           text: "Subscriptions",
           href: "#",
-          
         },
         {
           text: "Talent Workshops",
           href: "#",
-          
         },
         {
           text: "CPSC Certificates",
           href: "#",
-          
         },
         {
           text: "Ratings",
           href: "#",
-          
         },
         {
           text: "Shop Help",
           href: "#",
-          
         },
         {
           text: "Contact Us",
           href: "#",
-          
         },
       ],
 
@@ -162,29 +154,47 @@ export default {
         {
           text: "DC",
           href: "#",
-          
         },
         {
           text: "Mad Magazine",
           href: "#",
-          
         },
         {
           text: "DC Kids",
           href: "#",
-          
         },
         {
           text: "DC Universe",
           href: "#",
-          
         },
         {
           text: "DC Power Visa",
           href: "#",
-          
         },
       ],
+
+      footerSocials : [
+        {
+          url: "footer-facebook.png",
+          imgName: "Facebook link",
+        },
+        {
+          url: "footer-periscope.png",
+          imgName: "Periscope link",
+        },
+        {
+          url: "footer-pinterest.png",
+          imgName: "Pinterest link",
+        },
+        {
+          url: "footer-twitter.png",
+          imgName: "Twitter link",
+        },
+        {
+          url: "footer-youtube.png",
+          imgName: "Youtube link",
+        },
+      ]
     }
   }
 }
@@ -193,6 +203,9 @@ export default {
 <style lang="scss" scoped>
   @import "../assets/scss/style.scss";
 
+  .footer {
+    position: relative;
+  }
   .top-part-footer {
     position: relative;
     .bg-image-dc {
@@ -225,6 +238,35 @@ export default {
       }
       img {
         height: 350px;
+      }
+    }
+  }
+
+  .bottom-part-footer {
+    width: 100%;
+    height: 100%;
+    background-color: $bgDarkGray;
+    .container-bottom-footer{
+      @include withWebsite;
+      padding: 2rem 0;
+      position: absolute;
+      bottom: -50px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      .sing-up-footer {
+        button {
+          background-color: inherit;
+          color: white;
+          text-transform: uppercase;
+          font-size: 1rem;
+          padding: 1rem;
+          font-weight: 600;
+          border: 2px solid $mainColor;
+        }
+      }
+      .socials-footer {
+
       }
     }
   }
