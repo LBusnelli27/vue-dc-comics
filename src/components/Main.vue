@@ -173,6 +173,9 @@ export default {
       padding: .8rem 2rem;
       font-weight: 600;
       border: none ;
+      &:hover {
+        transform: scale(1.05);
+      }
     }
   }
 
