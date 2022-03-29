@@ -81,6 +81,9 @@ export default {
         display: flex;
         align-items: center;
         padding: 1rem;
+        &:hover {
+          transform: scale(1.05);
+        }
         p {
           padding-left: .5rem;
           font-size: .7rem;

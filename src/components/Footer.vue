@@ -231,6 +231,9 @@ export default {
           a {
           color: #c8cdce;
           font-weight: 200;
+          &:hover {
+            color: white;
+          }
         }
         }
       }
