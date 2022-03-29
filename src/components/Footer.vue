@@ -1,7 +1,7 @@
 <template>
   <div class="footer">
     <section class="top-part-footer">
-      <img class="bg-image-dc" src="../assets/img/footer-bg.jpg" alt="Background footer img">
+      <!-- <img class="bg-image-dc" src="../assets/img/footer-bg.jpg" alt="Background footer img"> -->
 
       <div class="footer-container-list">
         <div class="list-side-footer">
@@ -205,18 +205,16 @@ export default {
 
   .footer {
     position: relative;
+    height: 50vh;
+    background-image: url('../assets/img/footer-bg.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
   }
   .top-part-footer {
-    position: relative;
-    .bg-image-dc {
-      width: 100%;
-    }
+    padding: 3rem 0;
     .footer-container-list {
       @include withWebsite;
       color: white;
-      position: absolute;
-      top: 50px;
-      left: 100px;
       display: flex;
       justify-content: space-between;
       align-items: center;
@@ -244,13 +242,10 @@ export default {
 
   .bottom-part-footer {
     width: 100%;
-    height: 100%;
     background-color: $bgDarkGray;
     .container-bottom-footer{
       @include withWebsite;
       padding: 2rem 0;
-      position: absolute;
-      bottom: -50px;
       display: flex;
       justify-content: space-between;
       align-items: center;
@@ -266,7 +261,9 @@ export default {
         }
       }
       .socials-footer {
-
+        display: flex;
+        gap: .7rem;
+        color: $mainColor;
       }
     }
   }
