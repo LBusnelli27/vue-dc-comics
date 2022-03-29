@@ -23,4 +23,8 @@ export default {
 
 <style lang="scss">
   @import "./assets/scss/style.scss";
+
+  #app {
+    min-width: 1100px;
+  }
 </style>
