@@ -1,8 +1,8 @@
 <template>
   <div class="main">
     <div class="comics-container">
-      <div class="comics-in-container">
-        <h2>---x  Content goes here  x---</h2>
+      <div class="comics-library-container">
+        <CardComic />
       </div>
     </div>
     <div class="comics-buy-container">
@@ -18,8 +18,13 @@
 </template>
 
 <script>
+import CardComic from './CardComic.vue';
+
 export default {
   name : 'indexMain',
+  components : {
+    CardComic
+  },
   data : function() {
     return {
       mainNavBuyElement : [
@@ -59,13 +64,8 @@ export default {
 
   .comics-container {
     background-color: $bgBlack;
-    .comics-in-container {
+    .comics-library-container {
       @include withWebsite;
-      h2{
-        color: white;
-        text-align: center;
-        padding: 2rem;
-      }
     }
   }
 
