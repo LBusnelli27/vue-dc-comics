@@ -1,9 +1,11 @@
 <template>
   <div class="main">
     <div class="comics-container">
+      <div class="tag-current">Current Series</div>
       <div class="comics-library-container">
         <CardComic v-for="(element, index) in comicElements" :key="index" :bookObj="element" />
       </div>
+      <button>Load more</button>
     </div>
     <div class="comics-buy-container">
       <div class="div-container-element">
@@ -138,13 +140,39 @@ export default {
   @import "../assets/scss/style.scss";
 
   .comics-container {
+    position: relative;
+    padding: 2rem 0;
     background-color: $bgBlack;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .tag-current {
+      position: absolute;
+      top: -30px;
+      left: 9%;
+      background-color: $mainColor;
+      color: white;
+      text-transform: uppercase;
+      font-size: 1.2rem;
+      padding: .8rem 2rem;
+      font-weight: 600;
+      border: none ;
+    }
     .comics-library-container {
       @include withWebsite;
       display: flex;
       flex-wrap: wrap;
       gap: 1.5rem;
       padding: 2rem 0;
+    }
+    button {
+      background-color: $mainColor;
+      color: white;
+      text-transform: uppercase;
+      font-size: .8rem;
+      padding: .8rem 2rem;
+      font-weight: 600;
+      border: none ;
     }
   }
 
